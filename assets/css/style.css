@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #141619;
+    background-color: #000000;
     color: #FFFFFF;
     position: relative;
     width: 100%;
@@ -23,10 +23,13 @@ main {
 /* Header - Responsive */
 
 header {
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 88px;
-    background-color: #141619;
+    background: linear-gradient(135deg,
+            rgba(102, 93, 205, 0.05) 0%,
+            rgba(95, 164, 230, 0.05) 44.76%,
+            rgba(210, 171, 103, 0.05) 100%);
     z-index: 1000;
 }
 
@@ -44,7 +47,7 @@ header {
 .logo img {
     width: 180.78px;
     height: 42px;
-    background: #141619;
+    background: #000000;
     margin-top: 22.3px;
 }
 
@@ -140,7 +143,7 @@ nav ul li.dropdown::after {
     top: 88px;
     left: 0;
     width: 100%;
-    background-color: #141619;
+    background-color: #000000;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 999;
@@ -196,19 +199,22 @@ nav ul li.dropdown::after {
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
+
     /* Header - Mobile Menu */
     header {
-        height: 70px; /* This line must be present */
+        height: 70px;
+        /* This line must be present */
     }
-    
+
     .header-container {
         height: 60px;
         padding: 0 15px;
         justify-content: space-between;
         position: relative;
-        background-color: #141619; /* Add this line */
+        background-color: #000000;
+        /* Add this line */
     }
-    
+
     .logo img {
         width: 140px;
         margin-top: 15px;
@@ -216,11 +222,13 @@ nav ul li.dropdown::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     /* Mobile Navigation */
     .mobile-nav {
-        top: 70px !important; /* Important: This must be 70px */
-        background-color: #141619 !important; /* Add this */
+        top: 70px !important;
+        /* Important: This must be 70px */
+        background-color: #000000 !important;
+        /* Add this */
         display: none;
         position: fixed;
         left: 0;
@@ -238,7 +246,8 @@ nav ul li.dropdown::after {
     justify-content: center;
     align-items: center;
     padding-top: 88px;
-    background: #141619;
+    background: #000000;
+    top: -100px;
 }
 
 .hero-content {
@@ -249,7 +258,7 @@ nav ul li.dropdown::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 40px auto 0;
+    margin: 0px auto 0;
 }
 
 .hero h1 {
@@ -448,15 +457,18 @@ nav ul li.dropdown::after {
 
 /* Calculate positions based on percentage */
 .divider-1 {
-    left: 25%; /* After first column */
+    left: 25%;
+    /* After first column */
 }
 
 .divider-2 {
-    left: 50%; /* After second column */
+    left: 50%;
+    /* After second column */
 }
 
 .divider-3 {
-    left: 75%; /* After third column */
+    left: 75%;
+    /* After third column */
 }
 
 /* Horizontal Divider */
@@ -477,7 +489,7 @@ nav ul li.dropdown::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #141619;
+    background: #000000;
 }
 
 .market-making .background {
@@ -503,7 +515,7 @@ nav ul li.dropdown::after {
 }
 
 /* Heading Section */
-.market-making-content > .section-header {
+.market-making-content>.section-header {
     width: 100%;
     max-width: 1056px;
     text-align: center;
@@ -636,7 +648,7 @@ nav ul li.dropdown::after {
     width: 100%;
     display: flex;
     justify-content: center;
-    background: #141619;
+    background: #000000;
 }
 
 .exchanges-layout {
@@ -674,7 +686,7 @@ nav ul li.dropdown::after {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background: #141619;
+    background: #000000;
 }
 
 .partners-content {
@@ -726,6 +738,7 @@ nav ul li.dropdown::after {
 }
 
 .partners-container {
+    text-align: start;
     display: flex;
     align-items: center;
     gap: 80px;
@@ -737,7 +750,6 @@ nav ul li.dropdown::after {
 /* Text on Left Side */
 .partners-text {
     flex: 1;
-    text-align: center;
 }
 
 .partners-text h2 {
@@ -766,15 +778,17 @@ nav ul li.dropdown::after {
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+
 }
 
 /* We are in a good company - Modern Testimonial Section */
 .testimonial-section {
     width: 100%;
-    padding: 150px 0;
+    padding: 0px 0;
     display: flex;
     justify-content: center;
-    background: #141619;
+    background: #000000;
+    margin-bottom: 60px;
 }
 
 .testimonial-content {
@@ -782,8 +796,10 @@ nav ul li.dropdown::after {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    gap: 80px;
+    align-self: center;
+    gap: 40px;
 }
 
 .testimonial-section .section-header {
@@ -808,18 +824,6 @@ nav ul li.dropdown::after {
     display: inline-block;
 }
 
-.testimonial-section h2::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
 .testimonial-section .section-subtitle {
     width: 100%;
     max-width: 700px;
@@ -829,85 +833,43 @@ nav ul li.dropdown::after {
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    color: #B0B0B0;
-    margin: 40px 0 0 0;
+    color: #ffffff;
     padding: 0 20px;
 }
 
 /* Testimonial Container */
 .testimonial-container {
-    width: 100%;
+    max-width: 700px;
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-.testimonial-card {
-    width: 100%;
-    max-width: 1000px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 60px 70px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-.testimonial-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
-    border-radius: 16px 16px 0 0;
-}
-
-.quote-icon {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    font-family: 'Inter', sans-serif;
-    font-size: 120px;
-    font-weight: 700;
-    color: rgba(95, 164, 230, 0.1);
-    line-height: 1;
-    user-select: none;
-}
-
 .testimonial-text {
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 1;
-}
-
-.testimonial-text .quote {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 34px;
-    color: #E0E0E0;
+    color: #ffffff;
+    text-align: center;
     margin: 0;
     letter-spacing: 0.2px;
+    align-items: center;
 }
 
-/* Testimonial Footer */
 .testimonial-footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    justify-content: center;
 }
 
 .author-details {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 6px;
 }
 
@@ -919,6 +881,7 @@ nav ul li.dropdown::after {
     line-height: 26px;
     color: #FFFFFF;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .author-title {
@@ -928,6 +891,27 @@ nav ul li.dropdown::after {
     font-size: 16px;
     line-height: 22px;
     color: #B0B0B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.author-title p {
+    margin: 0;
+}
+
+.author-title div {
+    color: #ffffff;
+}
+
+.author-title img {
+    position: relative;
+    width: 123.5px;
+    height: 26px;
+    left: 17px;
+    top: 0px;
 }
 
 /* Testimonial Controls */
@@ -954,10 +938,10 @@ nav ul li.dropdown::after {
 }
 
 .nav-btn {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(101, 230, 219, 0.562);
     background: rgba(255, 255, 255, 0.05);
     color: #FFFFFF;
     font-size: 20px;
@@ -1147,7 +1131,7 @@ nav ul li.dropdown::after {
     padding: 150px 0;
     display: flex;
     justify-content: center;
-    background: #141619;
+    background: #000000;
 }
 
 .contact-container {
@@ -1214,8 +1198,8 @@ nav ul li.dropdown::after {
 /* Footer */
 footer {
     width: 100%;
-    background: #0D0F11;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(102, 93, 205, 0.05) 0%, rgba(95, 164, 230, 0.05) 44.76%, rgba(210, 171, 103, 0.05) 100%);
+    border-top: 1px solid #0000001a;
     padding: 80px 0 40px;
     display: flex;
     justify-content: center;
@@ -1359,25 +1343,26 @@ footer {
 
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
+
     /* Header adjustments */
     .header-container {
         width: 95%;
         padding: 0 15px;
     }
-    
+
     .logo img {
         width: 160px;
         height: auto;
         margin-top: 20px;
     }
-    
+
     /* Hero Section */
     .hero .balancing,
     .hero .crypto-markets {
         font-size: 56px;
         line-height: 70px;
     }
-    
+
     /* About Section */
     .about h2,
     .market-making h2,
@@ -1386,71 +1371,71 @@ footer {
         font-size: 48px;
         line-height: 64px;
     }
-    
+
     .about-header p,
     .market-making .subtitle {
         font-size: 18px;
         line-height: 28px;
     }
-    
+
     /* Services Section */
     .services-container,
     .exchanges-layout {
         gap: 60px;
     }
-    
+
     .service-card h3 {
         font-size: 32px;
         line-height: 40px;
     }
-    
+
     /* Stats Grid */
     .stats-column {
         width: 50%;
         height: 160px;
     }
-    
+
     .divider-1,
     .divider-3 {
         display: none;
     }
-    
+
     .divider-2 {
         left: 50%;
     }
-    
+
     .horizontal-divider {
         top: 160px;
     }
-    
+
     /* Partners Section */
     .partners-container {
         flex-direction: column;
         gap: 60px;
         text-align: center;
     }
-    
+
     /* Join Section */
     .join-content {
         gap: 60px;
     }
-    
+
     .join-line,
     .team-line {
         font-size: 56px;
         line-height: 60px;
     }
-    
+
     /* Footer */
     .footer-links {
         gap: 70px;
     }
-    
+
     .footer-main {
         margin-left: 40px;
         margin-right: 40px;
     }
-    
+
     .legal-link {
         margin-left: 40px;
         margin-right: 40px;
@@ -1460,16 +1445,16 @@ footer {
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
-        
+
     /* Hide desktop navigation on mobile */
     nav {
         display: none;
     }
-    
+
     .header-btn {
         display: block;
     }
-    
+
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
         display: block;
@@ -1484,29 +1469,29 @@ footer {
         cursor: pointer;
         z-index: 1001;
     }
-    
+
     /* Hero Section */
     .hero {
         min-height: auto;
         padding: 100px 20px 60px;
         height: auto;
     }
-    
+
     .hero-content {
         margin-top: 20px;
     }
-    
+
     .hero .balancing,
     .hero .crypto-markets {
         font-size: 40px;
         line-height: 50px;
         margin-bottom: 20px;
     }
-    
+
     .hero .crypto-markets {
         margin-top: 20px;
     }
-    
+
     .hero p {
         font-size: 16px;
         line-height: 26px;
@@ -1514,265 +1499,265 @@ footer {
         width: 100%;
         padding: 0 10px;
     }
-    
+
     .hero-btn {
         padding: 15px 25px;
         height: 50px;
         min-width: 180px;
     }
-    
+
     /* About Section */
     .about {
         padding: 60px 0;
         gap: 40px;
     }
-    
+
     .about h2 {
         font-size: 36px;
         line-height: 46px;
     }
-    
+
     .about-header p {
         font-size: 16px;
         line-height: 26px;
         padding: 0 15px;
     }
-    
+
     /* Stats Grid */
     .stats-grid {
         width: 100%;
         max-width: 100%;
     }
-    
+
     .stats-column {
         width: 50%;
         height: 140px;
     }
-    
+
     .stat-number {
         font-size: 24px !important;
         line-height: 40px !important;
     }
-    
+
     .stat-label {
         font-size: 14px !important;
         line-height: 20px !important;
         width: 90%;
     }
-    
+
     .vertical-divider.divider-1,
     .vertical-divider.divider-3 {
         display: none;
     }
-    
+
     .horizontal-divider {
         top: 140px;
     }
-    
+
     /* Market Making Section */
     .market-making {
         margin-bottom: 20px;
     }
-    
+
     .market-making-content {
         gap: 40px;
     }
-    
+
     .market-making h2 {
         font-size: 36px;
         line-height: 46px;
         padding: 0 15px;
     }
-    
+
     .market-making .subtitle {
         font-size: 16px;
         line-height: 26px;
         padding: 0 15px;
     }
-    
+
     .services-container {
         flex-direction: column;
         gap: 40px;
         width: 90%;
     }
-    
+
     .service-card {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .service-card h3 {
         font-size: 28px;
         line-height: 36px;
     }
-    
+
     .service-card .highlight {
         font-size: 18px;
         line-height: 26px;
     }
-    
+
     .service-card .description {
         font-size: 16px;
         line-height: 26px;
     }
-    
+
     .image-gradient-container img {
         max-width: 100%;
     }
-    
+
     /* Exchanges Layout */
     .market-making-exchanges {
         padding: 40px 0;
     }
-    
+
     .exchanges-layout {
         flex-direction: column;
         gap: 40px;
         width: 90%;
     }
-    
+
     .exchanges-layout .service-card {
         margin-top: 0;
         text-align: center;
     }
-    
+
     .exchanges-layout img {
         top: 0;
         max-width: 100%;
         order: -1;
     }
-    
+
     /* Partners Section */
     .partners-section {
         padding: 80px 0;
     }
-    
+
     .partners-content {
         gap: 40px;
     }
-    
+
     .partners-container {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .partners-text h2 {
         font-size: 36px;
         line-height: 46px;
     }
-    
+
     .partners-image img {
         max-width: 100%;
     }
-    
+
     /* Testimonial Section */
     .testimonial-section {
         padding: 80px 0;
     }
-    
+
     .testimonial-content {
         gap: 40px;
     }
-    
+
     .testimonial-section h2 {
         font-size: 36px;
         line-height: 46px;
     }
-    
+
     .testimonial-section .section-subtitle {
         font-size: 16px;
         line-height: 26px;
         padding: 0 15px;
     }
-    
+
     .testimonial-card {
         padding: 30px 20px;
     }
-    
+
     .testimonial-text .quote {
         font-size: 16px;
         line-height: 28px;
     }
-    
+
     .testimonial-footer {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
+
     .testimonial-controls {
         justify-content: center;
         width: 100%;
     }
-    
+
     /* Join Section */
     .join-section {
         padding: 80px 0;
     }
-    
+
     .join-content {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .join-heading {
         position: static;
         text-align: center;
     }
-    
+
     .join-line,
     .team-line {
         font-size: 40px;
         line-height: 46px;
     }
-    
+
     .join-text {
         text-align: center;
     }
-    
+
     .intro-text {
         font-size: 20px;
         line-height: 30px;
     }
-    
+
     .description-text {
         font-size: 16px;
         line-height: 26px;
     }
-    
+
     .join-link {
         margin: 20px auto 0;
     }
-    
+
     /* Contact Section */
     .contact-section {
         padding: 80px 0;
     }
-    
+
     .contact-content {
         gap: 40px;
     }
-    
+
     .contact-section h2 {
         font-size: 36px;
         line-height: 46px;
     }
-    
+
     .contact-description {
         font-size: 16px;
         line-height: 26px;
         padding: 0 15px;
     }
-    
+
     /* Footer */
     footer {
         padding: 60px 0 30px;
     }
-    
+
     .footer-content {
         gap: 40px;
     }
-    
+
     .footer-main {
         flex-direction: column;
         align-items: center;
@@ -1782,37 +1767,37 @@ footer {
         margin-right: 0;
         padding-bottom: 40px;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 30px;
         align-items: center;
     }
-    
+
     .link-column {
         align-items: center;
     }
-    
+
     .footer-logo-section {
         align-items: center;
     }
-    
+
     .footer-logo img {
         width: 160px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
+
     .footer-legal {
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
-    
+
     .legal-link {
         margin-left: 0;
         margin-right: 0;
@@ -1821,43 +1806,44 @@ footer {
 
 /* Small Mobile (480px and below) */
 @media (max-width: 480px) {
+
     /* Header */
     .logo img {
         width: 120px;
     }
-    
+
     .mobile-menu-toggle {
         right: 10px;
         font-size: 20px;
     }
-    
+
     /* Hero Section */
     .hero {
         padding: 80px 15px 40px;
     }
-    
+
     .hero .balancing,
     .hero .crypto-markets {
         font-size: 32px;
         line-height: 40px;
     }
-    
+
     /* About Section */
     .about h2 {
         font-size: 32px;
         line-height: 40px;
     }
-    
+
     .stats-column {
         width: 100%;
         height: 120px;
     }
-    
+
     .vertical-divider,
     .horizontal-divider {
         display: none;
     }
-    
+
     /* All other headings */
     .market-making h2,
     .partners-text h2,
@@ -1866,14 +1852,14 @@ footer {
         font-size: 32px;
         line-height: 40px;
     }
-    
+
     /* Join Section */
     .join-line,
     .team-line {
         font-size: 32px;
         line-height: 38px;
     }
-    
+
     .intro-text {
         font-size: 18px;
         line-height: 28px;
